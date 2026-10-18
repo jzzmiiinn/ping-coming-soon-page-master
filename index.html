@@ -1,14 +1,18 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="icon"
       type="image/png"
@@ -16,87 +20,95 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Ping coming soon page</title>
     <link rel="stylesheet" href="./output.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
     <style>
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
+
   <body class="font-libre">
-    <div class="flex flex-col items-center justify-center py-4 px-10">
-      <img class="m-8" src="images/logo.svg" alt="Logo" />
-      <p class="text-[hsl(0,0%,59%)] text-5xl mt-4 font-light">
-        We are launching <span class="text-black font-bold">soon!</span>
-      </p>
-      <p class="text-[hsl(0,0%,59%)] m-4 text-base font-light">
+    <main class="flex flex-col items-center justify-center px-6 py-4 sm:px-10">
+      <img class="m-8" src="./images/logo.svg" alt="Ping logo" />
+
+      <h1 class="mt-4 text-center text-2xl font-light text-[hsl(0,0%,59%)] sm:text-4xl md:text-5xl">
+        We are launching
+        <span class="font-bold text-black">soon!</span>
+      </h1>
+
+      <p class="m-4 text-center text-base font-light text-[hsl(0,0%,59%)]">
         Subscribe and get notified
       </p>
-      <div
-        class="text-base flex flex-col mb-6 md:flex-row gap-4 w-full max-w-xl"
+
+      <form
+        id="subscribeForm"
+        class="mb-6 flex w-full max-w-xl flex-col gap-4 sm:flex-row"
       >
-        <form>
+        <div class="flex-1">
+          <label for="emailForm" class="sr-only">Email address</label>
           <input
             type="email"
             id="emailForm"
+            name="email"
             placeholder="Your email address..."
-            class="flex-1 border border-[hsl(223,100%,88%)] rounded-full px-6 py-3 outline-none"
+            required
+            class="w-full rounded-full border border-[hsl(223,100%,88%)] px-6 py-3 outline-none"
           />
-          <button
-            class="bg-[hsl(223,87%,63%)] text-white rounded-full px-8 py-3 font-semibold hover:opacity-90 transition"
-          >
-            Notify Me
-          </button>
-        </form>
-      </div>
-      <p id="error"></p>
+          <p id="error" class="mt-2 text-sm text-red-500" role="alert"></p>
+        </div>
+
+        <button
+          type="submit"
+          class="rounded-full bg-[hsl(223,87%,63%)] px-8 py-3 font-semibold text-white transition hover:opacity-90"
+        >
+          Notify Me
+        </button>
+      </form>
+
       <img
-        class="w-full max-w-xl my-10"
-        src="images/illustration-dashboard.png"
-        alt="illustration dashboard"
+        class="my-10 w-full max-w-xl"
+        src="./images/illustration-dashboard.png"
+        alt="Dashboard illustration"
       />
-      <div class="flex gap-8 text-base text-[hsl(223,87%,63%)] m-6">
+
+      <div class="m-6 flex gap-8 text-base text-[hsl(223,87%,63%)]">
         <a
           href="https://facebook.com"
           target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(223,100%,88%)] transition hover:bg-[hsl(223,87%,63%)] hover:text-white"
         >
-          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
         </a>
+
         <a
           href="https://x.com"
           target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
+          rel="noopener noreferrer"
+          aria-label="X"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(223,100%,88%)] transition hover:bg-[hsl(223,87%,63%)] hover:text-white"
         >
-          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
         </a>
+
         <a
           href="https://instagram.com"
           target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
-      <footer class="text-[hsl(0,0%,59%)] text-xs">
-        &copy; Copyright Ping. All rights reserved.
-      </footer>
-    </div>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Yasmin Ali</a>.
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="flex h-10 w-10 items-center justify-center rounded
