@@ -1,32 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="font-libre">
+    <div class="flex flex-col items-center justify-center py-4 px-10">
+      <img class="m-8" src="images/logo.svg" alt="Logo" />
+      <p class="text-[hsl(0,0%,59%)] text-5xl mt-4 font-light">
+        We are launching <span class="text-black font-bold">soon!</span>
+      </p>
+      <p class="text-[hsl(0,0%,59%)] m-4 text-base font-light">
+        Subscribe and get notified
+      </p>
+      <div
+        class="text-base flex flex-col mb-6 md:flex-row gap-4 w-full max-w-xl"
+      >
+        <form>
+          <input
+            type="email"
+            id="emailForm"
+            placeholder="Your email address..."
+            class="flex-1 border border-[hsl(223,100%,88%)] rounded-full px-6 py-3 outline-none"
+          />
+          <button
+            class="bg-[hsl(223,87%,63%)] text-white rounded-full px-8 py-3 font-semibold hover:opacity-90 transition"
+          >
+            Notify Me
+          </button>
+        </form>
+      </div>
+      <p id="error"></p>
+      <img
+        class="w-full max-w-xl my-10"
+        src="images/illustration-dashboard.png"
+        alt="illustration dashboard"
+      />
+      <div class="flex gap-8 text-base text-[hsl(223,87%,63%)] m-6">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://x.com"
+          target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-[hsl(223,100%,88%)] text-[hsl(223,87%,63%)] hover:bg-[hsl(223,87%,63%)] hover:text-white transition"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <footer class="text-[hsl(0,0%,59%)] text-xs">
+        &copy; Copyright Ping. All rights reserved.
+      </footer>
+    </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-      <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Yasmin Ali</a>.
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
